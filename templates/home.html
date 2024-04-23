@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+
+</head>
+
+<body>
+    <div class="login">
+        <h1>Stores Sales Prediction</h1>
+        <form action="{{ url_for('predict_datapoint')}}" method="post">
+            <input type="text" name="Pregnancies" placeholder="Pregnancies" required="required" /><br>
+            <input type="text" name="Glucose" placeholder="Glucose" required="required" /><br>
+            <input type="text" name="BloodPressure" placeholder="BloodPressure" required="required" /><br>
+            <input type="text" name="SkinThickness" placeholder="SkinThickness" required="required" /><br>
+            <input type="text" name="Insulin" placeholder="Insulin" required="required" /><br>
+            <input type="text" name="BMI" placeholder="BMI" required="required" /><br>
+            <input type="text" name="DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction"
+                required="required" /><br>
+            <input type="text" name="Age" placeholder="Age" required="required" /><br>
+
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+    </div>
+    <div>
+        <form action="{{ url_for('predict_datapoint')}}" method="post">
+            <fieldset>
+                <legend>Stores Sales Prediction</legend>
+                <fieldset>
+                    <label for="Item_Weight">Item Weight :</label>
+                    <input type="text" id="Item_Weight" name="Item_Weight" required="required"><br><br>
+
+                    <label for="Item_Fat_Content">Item Fat Content :</label>
+                    <input type="radio" value="Low Fat" for="Low Fat" id='Low Fat' name="Item_Fat_Content" required="required">
+                    <label for="Low Fat">Low Fat</label>
+                    <input type="radio" value="Regular" for="Regular" id='Regular' name="Item_Fat_Content" required="required">
+                    <label for="Regular">Regular</label><br><br>
+
+                    <label for="Item_Visibility">Item Visibility :</label> <input type="text" id="Item_Visibility"
+                        name="Item_Visibility" required="required"><br><br>
+
+                    <label for="Item_Type">Item Type :</label>
+                    <select id="Item_Type" name="Item_Type" required="required">
+                        <option value="Dairy">Dairy </option>
+                        <option value="Soft Drinks">Soft Drinks </option>
+                        <option value="Meat">Meat </option>
+                        <option value="Fruits and Vegetables">Fruits and Vegetables </option>
+                        <option value="Household">Household </option>
+                        <option value="Baking Goods">Baking Goods </option>
+                        <option value="Snack Foods">Snack Foods </option>
+                        <option value="Frozen Foods">Frozen Foods </option>
+                        <option value="Breakfast">Breakfast </option>
+                        <option value="Health and Hygiene">Health and Hygiene </option>
+                        <option value="Hard Drinks">Hard Drinks </option>
+                        <option value="Canned">Canned </option>
+                        <option value="Breads">Breads </option>
+                        <option value="Starchy Foods">Starchy Foods </option>
+                        <option value="Seafood">Seafood </option>
+                        <option value="Others">Others </option>
+                    </select><br><br>
+
+                    <label for="Item_MRP">Item MRP :</label> <input type="text" id="Item_MRP" name="Item_MRP"
+                        required="required"><br><br>
+
+                    <label for="Outlet_Identifier">Outlet Identifier :</label>
+                    <select id="Outlet_Identifier" name="Outlet_Identifier" required="required">
+                        <option value="OUT010">OUT010 </option>
+                        <option value="OUT013">OUT013 </option>
+                        <option value="OUT017">OUT017 </option>
+                        <option value="OUT018">OUT018 </option>
+                        <option value="OUT019">OUT019 </option>
+                        <option value="OUT027">OUT027 </option>
+                        <option value="OUT035">OUT035 </option>
+                        <option value="OUT045">OUT045 </option>
+                        <option value="OUT046">OUT046 </option>
+                        <option value="OUT049">OUT049 </option>
+                    </select><br><br>
+
+                    <label for="Outlet_Establishment_Year">Outlet Establishment Year :</label> 
+                    <input type="text" id="Outlet_Establishment_Year" name="Outlet_Establishment_Year" required="required"><br><br>
+
+
+                    <label for="Outlet_Size">Outlet size :</label>
+                    <input type="radio" value="Small" for="Small" id='Small' name="Outlet_Size" required="required">
+                    <label for="Small">Small</label>
+                    <input type="radio" value="Medium" for="Medium" id='Medium' name="Outlet_Size" required="required">
+                    <label for="Medium">Medium</label>
+                    <input type="radio" value="High" for="High" id='High' name="Outlet_Size" required="required">
+                    <label for="High">High</label><br><br>
+
+                    <label for="Outlet_Location_Type">Item Location Type :</label>
+                    <input type="radio" value="Tier 1" for="Tier 1" id='Tier 1' name="Outlet_Location_Type" required="required">
+                    <label for="Tier 1">Tier 1</label>
+                    <input type="radio" value="Tier 2" for="Tier 2" id='2' name="Outlet_Location_Type" required="required">
+                    <label for="Tier 2">Tier 2</label>
+                    <input type="radio" value="Tier 3" for="Tier 3" id='Tier 3' name="Outlet_Location_Type" required="required">
+                    <label for="Tier 3">Tier 3</label><br><br>
+
+                    <label for="Outlet_Type">Outlet Type :</label>
+                    <select id="Outlet_Type" name="Outlet_Type" required="required">
+                        <option value="Grocery Store">Grocery Store </option>
+                        <option value="Supermarket Type1">Supermarket Type1 </option>
+                        <option value="Supermarket Type2">Supermarket Type2 </option>
+                        <option value="Supermarket Type3">Supermarket Type3 </option>
+                    </select><br><br>
+
+                    <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+                    <input type="reset">
+                </fieldset>
+            </fieldset>
+        </form>
+        <br>
+        <br>
+
+
+    </div>
+    {{result}}
+
+</body>
+
+</html>
