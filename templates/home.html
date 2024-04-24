@@ -8,24 +8,8 @@
 </head>
 
 <body>
-    <div class="login">
-        <h1>Stores Sales Prediction</h1>
-        <form action="{{ url_for('predict_datapoint')}}" method="post">
-            <input type="text" name="Pregnancies" placeholder="Pregnancies" required="required" /><br>
-            <input type="text" name="Glucose" placeholder="Glucose" required="required" /><br>
-            <input type="text" name="BloodPressure" placeholder="BloodPressure" required="required" /><br>
-            <input type="text" name="SkinThickness" placeholder="SkinThickness" required="required" /><br>
-            <input type="text" name="Insulin" placeholder="Insulin" required="required" /><br>
-            <input type="text" name="BMI" placeholder="BMI" required="required" /><br>
-            <input type="text" name="DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction"
-                required="required" /><br>
-            <input type="text" name="Age" placeholder="Age" required="required" /><br>
-
-
-            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-        </form>
-    </div>
     <div>
+        <center>
         <form action="{{ url_for('predict_datapoint')}}" method="post">
             <fieldset>
                 <legend>Stores Sales Prediction</legend>
@@ -112,13 +96,13 @@
                 </fieldset>
             </fieldset>
         </form>
-        <br>
-        <br>
 
+        <br>
+        <br>
+    </center>
+        </div>
 
     </div>
-    {{result}}
-
 </body>
 
 </html>
